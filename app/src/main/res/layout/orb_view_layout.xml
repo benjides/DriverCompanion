@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/fire"
+        style="@style/BasicOrb"
+        android:layout_marginTop="488dp"
+        app:element="fire"
+        app:layout_constraintEnd_toStartOf="@+id/water"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/water"
+        style="@style/BasicOrb"
+        app:element="water"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fire"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/earth"
+        style="@style/BasicOrb"
+        app:element="earth"
+        app:layout_constraintEnd_toStartOf="@+id/electric"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fire" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/electric"
+        style="@style/BasicOrb"
+        app:element="electric"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/earth"
+        app:layout_constraintTop_toBottomOf="@+id/water" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/wind"
+        style="@style/BasicOrb"
+        app:element="wind"
+        app:layout_constraintEnd_toStartOf="@+id/ice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earth" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/ice"
+        style="@style/BasicOrb"
+        app:element="ice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wind"
+        app:layout_constraintTop_toBottomOf="@+id/electric" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/light"
+        style="@style/BasicOrb"
+        app:element="light"
+        app:layout_constraintEnd_toStartOf="@+id/dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+    <com.exfume.drivercompanion.widget.Orb
+        android:id="@+id/dark"
+        style="@style/BasicOrb"
+        app:element="dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/light"
+        app:layout_constraintTop_toBottomOf="@+id/ice" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:text="@string/reset"
+        app:layout_constraintTop_toBottomOf="@+id/light" />
+
+
+</android.support.constraint.ConstraintLayout>

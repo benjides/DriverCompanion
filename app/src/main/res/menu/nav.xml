@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_orbs"
+        android:icon="@drawable/nav_orbs"
+        android:title="@string/title_orbs" />
+
+    <item
+        android:id="@+id/nav_chart"
+        android:icon="@drawable/nav_chart"
+        android:title="@string/title_chart" />
+
+</menu>
