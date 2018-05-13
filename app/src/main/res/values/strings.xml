@@ -3,5 +3,19 @@
     <string name="title_orbs">Orbs</string>
     <string name="title_chart">Chart</string>
 
-    <string name="reset">Reset</string>
+    <string name="seal">Seal %1$s</string>
+    <string name="selfDestruct">Self Destruct</string>
+    <string name="stench">Stench</string>
+    <string name="backAttack">Back Attack</string>
+    <string name="shackleDriver">Shackle Driver</string>
+    <string name="blowdown">Blowdown</string>
+    <string name="shackleBlade">Shackle Blade</string>
+    <string name="affinityDown">Affinity Down</string>
+    <string name="reinforcements">Reinforcements</string>
+
+    <string name="keepAlive">Keep screen alive</string>
+    <string name="keepAliveSummary">Avoid the device go off while using the app. May cause battery drain</string>
+
+    <string name="closeDrawer">Close on check</string>
+    <string name="closeDrawerSummary">Close bottom drawer on checking an element</string>
 </resources>

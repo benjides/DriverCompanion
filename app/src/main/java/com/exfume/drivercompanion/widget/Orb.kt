@@ -7,7 +7,6 @@ import android.graphics.PorterDuff
 import android.os.Parcel
 import android.os.Parcelable
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewAnimationUtils
@@ -18,13 +17,11 @@ import com.exfume.drivercompanion.data.Element
 
 class Orb : FrameLayout, View.OnTouchListener {
 
-    private val TAG = "OrbView"
     private val element : Element
-
-    private val CHECKED_STATE_SET = intArrayOf(android.R.attr.state_checked)
 
     private val backgroundView : View by lazy { View(context) }
     private val imageView : ImageView by lazy { ImageView(context) }
+
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
@@ -47,23 +44,21 @@ class Orb : FrameLayout, View.OnTouchListener {
             imageView.setImageResource(element.icon)
             imageView.setColorFilter(Color.parseColor("#FFFFFF"))
         }
-
+        element.onResetListener {
+            if (isAttachedToWindow)
+                reset()
+        }
     }
 
 
     override fun performClick(): Boolean {
-        toggle()
+        element.toggle()
         return super.performClick()
-    }
-
-    private fun toggle() {
-        element.check = !element.check
     }
 
     fun reset() {
         if(element.check) {
             animate(width/2,height/2)
-            element.check = false
         }
     }
 
@@ -116,18 +111,6 @@ class Orb : FrameLayout, View.OnTouchListener {
         addView(view)
     }
 
-    public override fun onCreateDrawableState(extraSpace: Int): IntArray {
-        val drawableState = super.onCreateDrawableState(extraSpace + 1)
-        if (element.check) {
-            View.mergeDrawableStates(drawableState, CHECKED_STATE_SET)
-        }
-        return drawableState
-    }
-
-    override fun drawableStateChanged() {
-        super.drawableStateChanged()
-        invalidate()
-    }
 
     internal class SavedState : View.BaseSavedState {
         var checked: Boolean = false

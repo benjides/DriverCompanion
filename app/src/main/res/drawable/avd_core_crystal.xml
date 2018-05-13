@@ -1,0 +1,9 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_core_crystal">
+
+    <target
+        android:name="core"
+        android:animation="@animator/fade_core" />
+
+
+</animated-vector>

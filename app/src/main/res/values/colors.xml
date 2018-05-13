@@ -3,7 +3,9 @@
     <color name="colorPrimary">#69F0AE</color>
     <color name="colorPrimaryDark">#00F591</color>
     <color name="colorPrimaryDarkAlt">#00E676</color>
-    <color name="colorAccent">#7C4DFF</color>
+    <color name="colorAccent">#FF1744</color>
+    <color name="colorHighlight">#10000000</color>
     <color name="rippleHighlight">#616161</color>
-    <color name="colorWhite">#FFF</color>
+    <color name="colorWhite">#F0F0F0</color>
+    <color name="pureWhite">#FFF</color>
 </resources>

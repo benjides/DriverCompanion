@@ -2,7 +2,6 @@ package com.exfume.drivercompanion.util
 
 import android.graphics.Color
 import android.support.annotation.ColorInt
-import android.util.Log
 import com.exfume.drivercompanion.data.Element
 
 object Dsl {
@@ -21,7 +20,8 @@ object Dsl {
             set(value) {
                 c = Color.parseColor(value)
             }
-        fun build(): Element = Element(name, icon, c)
+        var seal: Int = 0
+        fun build(): Element = Element(name, icon, c, seal)
     }
 
     class ElementsBuilder {
@@ -72,6 +72,10 @@ object Dsl {
 
         fun build(): Map<String,Tree<Element>> = elementCombos
     }
+
+
+
+
 
 
 }

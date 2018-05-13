@@ -1,0 +1,9 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_reset">
+
+    <target
+        android:name="reset"
+        android:animation="@animator/rotate" />
+
+</animated-vector>

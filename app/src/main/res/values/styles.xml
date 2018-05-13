@@ -5,26 +5,46 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
 
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:fontFamily">@font/space_mono</item>
 
     </style>
 
-    <style name="BasicOrb" parent="AppTheme">
+    <style name="BrandText" parent="AppTheme">
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">@dimen/brandTextSize</item>
+        <item name="android:layout_width">@dimen/brandLayoutWidth</item>
+        <item name="android:fontFamily">@font/space_mono</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Orb" parent="AppTheme">
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="android:stateListAnimator">@animator/circle_elevation</item>
-        <item name="android:layout_width">85dp</item>
-        <item name="android:layout_height">85dp</item>
-        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_width">@dimen/orbSize</item>
+        <item name="android:layout_height">@dimen/orbSize</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:elevation">@dimen/defaultElevation</item>
+    </style>
+    <style name="Seal" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="SealImage" parent="AppTheme">
+        <item name="android:layout_width">@dimen/sealSize</item>
+        <item name="android:layout_height">@dimen/sealSize</item>
+        <item name="android:layout_margin">@dimen/sealMargin</item>
+        <item name="android:background">@drawable/circle</item>
     </style>
 
-    <style name="CircleOrb" parent="BasicOrb">
-        <!--<item name="android:background">@drawable/circle_ripple_selector</item>-->
+    <style name="ElementSheet" parent="AppTheme">
+        <item name="android:elevation">@dimen/lowerElevation</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/elementSheetHeight</item>
+        <item name="android:background">@color/pureWhite</item>
     </style>
 
 
