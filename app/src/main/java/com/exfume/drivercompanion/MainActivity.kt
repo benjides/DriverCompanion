@@ -25,6 +25,14 @@ class MainActivity : AppCompatActivity()  {
             elements.map { it.reset() }
             //anim.start()
         }
+    }
+
+    override fun onBackPressed() {
+        if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED) {
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+        } else {
+            super.onBackPressed()
+        }
 
     }
 
@@ -41,7 +49,6 @@ class MainActivity : AppCompatActivity()  {
             bottomSheetBehavior.state = state
         })
     }
-
 
 
 }
