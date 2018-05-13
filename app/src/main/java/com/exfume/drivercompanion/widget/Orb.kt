@@ -4,8 +4,6 @@ import android.animation.Animator
 import android.content.Context
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.os.Parcel
-import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -110,47 +108,6 @@ class Orb : FrameLayout, View.OnTouchListener {
         body()
         addView(view)
     }
-
-
-    internal class SavedState : View.BaseSavedState {
-        var checked: Boolean = false
-
-        constructor(superState: Parcelable) : super(superState)
-
-        private constructor(source : Parcel) : super(source) {
-            checked = source.readByte().toInt() != 0
-        }
-
-        override fun writeToParcel(out: Parcel, flags: Int) {
-            super.writeToParcel(out, flags)
-            out.writeByte((if (checked) 1 else 0).toByte())
-        }
-
-        companion object {
-            @JvmField
-            val CREATOR = object : Parcelable.Creator<SavedState> {
-                override fun createFromParcel(source : Parcel): SavedState {
-                    return SavedState(source)
-                }
-
-                override fun newArray(size: Int): Array<SavedState?> {
-                    return arrayOfNulls(size)
-                }
-            }
-        }
-    }
-
-    public override fun onSaveInstanceState(): Parcelable? {
-        val savedState = SavedState(super.onSaveInstanceState())
-        savedState.checked = element.check
-        return savedState
-    }
-
-    public override fun onRestoreInstanceState(state: Parcelable) {
-        val savedState = state as SavedState
-        super.onRestoreInstanceState(savedState.superState)
-        element.check = savedState.checked
-        requestLayout()
-    }
+    
 
 }

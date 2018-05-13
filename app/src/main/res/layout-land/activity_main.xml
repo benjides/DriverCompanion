@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
@@ -25,8 +24,6 @@
             android:id="@+id/core_crystal"
             android:layout_width="@dimen/coreSize"
             android:layout_height="@dimen/coreSize"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
             android:elevation="@dimen/defaultElevation"
             app:layout_constraintBottom_toBottomOf="@+id/brandText"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,15 +31,14 @@
             app:srcCompat="@drawable/avd_core_crystal" />
 
 
-
-
-
         <com.exfume.drivercompanion.widget.Chart
             android:id="@+id/chart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>
@@ -64,7 +60,6 @@
         android:elevation="@dimen/defaultElevation"
         app:layout_anchor="@+id/elementSheet"
         app:layout_anchorGravity="top|end" />
-
 
 
 </android.support.design.widget.CoordinatorLayout>

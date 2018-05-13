@@ -19,6 +19,7 @@ An Android with some useful features that might be useful during long battles in
 - [ ] AVD Crystal Core
 - [ ] Mipmap redesign
 - [ ] Clean Design
+- [x] Landscape mode
 - [ ] Translating
  
 ## Contributing

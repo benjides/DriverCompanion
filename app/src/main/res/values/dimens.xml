@@ -10,6 +10,6 @@
     <dimen name="elementSheetPadding">10dp</dimen>
     <dimen name="elementSheetHeight">230dp</dimen>
     <dimen name="coreSize">60dp</dimen>
-    <dimen name="brandTextSize">28sp</dimen>
+    <dimen name="brandTextSize">22sp</dimen>
     <dimen name="brandLayoutWidth">180dp</dimen>
 </resources>
