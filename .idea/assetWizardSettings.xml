@@ -18,8 +18,8 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="C:\Users\Benjamin\Desktop\SharedData\Background@1000x.png" />
-                                      <entry key="foregroundImage" value="C:\Users\Benjamin\Desktop\SharedData\Foreground@1000x.png" />
+                                      <entry key="backgroundImage" value="C:\Users\Benjamin\Desktop\SharedData\bg@1000x.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Benjamin\Desktop\SharedData\fg@1000x.png" />
                                       <entry key="legacyIconShape" value="CIRCLE" />
                                       <entry key="showSafeZone" value="false" />
                                       <entry key="webIconShape" value="CIRCLE" />
